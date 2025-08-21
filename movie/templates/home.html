@@ -21,6 +21,12 @@
         <div class="card-body">
           <h5 class="card-title fw-bold">{{ movie.title }}</h5>
           <p class="card-text">{{ movie.description }}</p>
+          <div class="mb-2">
+            <small class="text-muted">
+              <strong>Genre:</strong> {{ movie.genre|default:"N/A" }} <br>
+              <strong>Year:</strong> {{ movie.year|default:"N/A" }}
+            </small>
+          </div>
           {% if movie.url %}
             <a href="{{ movie.url }}" class="btn btn-primary">Movie Link</a>
           {% endif %}
